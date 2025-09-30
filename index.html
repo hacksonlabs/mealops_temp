@@ -1,10 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta http-equiv="refresh" content="0; url=https://mealops.info/">
-    <script>location.replace("https://mealops.info/");</script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting to MealOps</title>
+    <meta http-equiv="refresh" content="3; url=https://mealops.info/" />
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        background: radial-gradient(circle at top right, #1f2f46, #0b1623 55%);
+        color: #f2f6fc;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+
+      main {
+        width: min(520px, 100%);
+        padding: 48px 40px;
+        text-align: center;
+        background: rgba(6, 12, 20, 0.82);
+        border-radius: 24px;
+        box-shadow: 0 24px 60px rgba(2, 8, 18, 0.6);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      img.logo {
+        display: block;
+        margin: 0 auto 32px;
+        max-width: 220px;
+        width: 70%;
+        filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
+      }
+
+      h1 {
+        margin: 0 0 16px;
+        font-size: clamp(1.8rem, 2vw + 1rem, 2.4rem);
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+      }
+
+      p {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: rgba(242, 246, 252, 0.88);
+      }
+
+      p + p {
+        margin-top: 16px;
+      }
+
+      a.cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 28px;
+        padding: 12px 28px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #2ecc71, #1abc9c);
+        color: #02111f;
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: 0 12px 30px rgba(26, 188, 156, 0.35);
+      }
+
+      a.cta:hover,
+      a.cta:focus {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 40px rgba(26, 188, 156, 0.45);
+      }
+
+      footer {
+        margin-top: 36px;
+        font-size: 0.875rem;
+        color: rgba(242, 246, 252, 0.65);
+      }
+
+      .accent {
+        color: #2ecc71;
+        font-weight: 600;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition-duration: 0.001ms !important;
+          animation-duration: 0.001ms !important;
+        }
+      }
+
+      @media (max-width: 480px) {
+        main {
+          padding: 36px 24px;
+        }
+
+        img.logo {
+          max-width: 180px;
+          margin-bottom: 24px;
+        }
+      }
+    </style>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const target = "https://mealops.info/";
+        const redirectDelay = 5000;
+
+        window.setTimeout(() => {
+          window.location.replace(target);
+        }, redirectDelay);
+      });
+    </script>
   </head>
   <body>
-    <p>Redirecting to <a href="https://mealops.info/">mealops.info</a>…</p>
+    <main>
+      <img
+        class="logo"
+        src="MealOps_black_white.png"
+        alt="MealOps logo"
+        width="440"
+        height="202"
+      />
+      <h1>You're on your way to <span class="accent">MealOps</span>.</h1>
+      <p>
+        We create smarter food operations for teams that crave efficiency. Sit
+        tight &mdash; we're preparing your experience.
+      </p>
+      <p>
+        You will be redirected automatically. If that doesn't happen, use the
+        button below to continue immediately.
+      </p>
+      <a class="cta" href="https://mealops.info/">Continue to MealOps</a>
+      <footer>&copy; <span class="accent">MealOps</span></footer>
+    </main>
+    <noscript>
+      JavaScript is disabled. Please use the button above to proceed to
+      mealops.info.
+    </noscript>
   </body>
 </html>
